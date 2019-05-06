@@ -1,4 +1,7 @@
 2.0.11
+ * Bug 30388: Make sure the updated intermediate certificate is working
+
+2.0.11
  * Bug 29021: Tell NoScript it is running within Tor Browser
 
 2.0.10
