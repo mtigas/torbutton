@@ -47,9 +47,11 @@ const kCustomPref = "extensions.torbutton.security_custom";
 var write_setting_to_prefs = function (settingIndex) {
   Object.keys(kSecuritySettings).forEach(
     prefName => {
-      // Bug 31140 - Do not enable IonMonkey on AARCH64.
+      // Bug 31140 and 31616 - Do not enable JIT on aarch64.
       if (XPCOMABI.split("-")[0] == "aarch64" &&
-          prefName == "javascript.options.ion") {
+          (prefName == "javascript.options.ion" ||
+           prefName == "javascript.options.baselinejit" ||
+           prefName == "javascript.options.native_regexp")) {
         setBoolPref(prefName, false);
         return;
       }
