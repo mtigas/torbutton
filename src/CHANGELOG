@@ -1,3 +1,6 @@
+2.1.14
+ * Bug 31616: Do not enable JIT on aarch64
+
 2.1.13
  * Bug 31520: Remove monthly giving banner from Tor Browser
  * Bug 31140: Do not enable IonMonkey on AARCH64
